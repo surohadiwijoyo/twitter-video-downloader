@@ -22,7 +22,7 @@ def download_video(url, file_name) -> None:
     block_size = 1024
     progress_bar = tqdm(total=total_size, unit="B", unit_scale=True)
 
-    download_path = os.path.join(Path.home(), "Content", file_name)
+    download_path = os.path.join(Path.home("Content", file_name)
 
     with open(download_path, "wb") as file:
         for data in response.iter_content(block_size):
