@@ -50,7 +50,7 @@ def download_twitter_video(url):
     
     file_name = data.find_all("div", class_="leading-tight")[0].find_all("p", class_="m-2")[0].text # Video file name
     file_name = re.sub(r"[^a-zA-Z0-9]+", ' ', file_name).strip() + ".mp4" # Remove special characters from file name
-    
+    file_name = "twitter_video.mp4"
     download_video(highest_quality_url, file_name)
 
 
